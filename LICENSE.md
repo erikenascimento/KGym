@@ -3,7 +3,7 @@ Business Source License 1.1
 
 Licensor: Erike Nascimento
 
-Licensed Work: K-Gym (all source code in this repository)
+Licensed Work: KGym (all source code in this repository)
 
 Additional Use Grant:
 You may use the Licensed Work for non-commercial purposes, including

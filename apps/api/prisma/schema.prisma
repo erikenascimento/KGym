@@ -12,3 +12,28 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model User {
+  id              Int              @id @default(autoincrement())
+  name            String
+  personalRecords PersonalRecord[]
+}
+
+model Exercise {
+  id              Int              @id @default(autoincrement())
+  name            String
+  personalRecords PersonalRecord[]
+}
+
+model PersonalRecord {
+  id         Int      @id @default(autoincrement())
+  maxWeight Int
+
+  userId     Int
+  exerciseId Int
+
+  user       User     @relation(fields: [userId], references: [id])
+  exercise   Exercise @relation(fields: [exerciseId], references: [id])
+
+  @@unique([userId, exerciseId])
+}
